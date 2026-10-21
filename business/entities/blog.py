@@ -1,10 +1,12 @@
 class Blog:
 
-    def __init__(self, id=None, title=None, author=None, posts=[]):
+    def __init__(self, id=None, title=None, author=None, posts=None):
         self.__id = id
         self.__title = title
         self.__author = author
-        self.__posts = posts
+        # None en vez de [] por defecto: una lista como valor por defecto se
+        # compartiría entre todas las instancias de Blog
+        self.__posts = posts if posts is not None else []
 
     def __str__(self):
         result =  (f"Blog {{\n"
