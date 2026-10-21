@@ -10,15 +10,14 @@ def run():
     """
 
     cli.show_message("Enter a number to select the operations to run:")
-    cli.show_message("1: Author operations (complete)")
-    cli.show_message("2: Blog operations (complete)")
-    cli.show_message("3: Find author by username (exercise)")
-    cli.show_message("4: Post operations (exercise)")
-    cli.show_message("5: Find blog with author and posts (exercise)")
+    cli.show_message("1: Author operations")
+    cli.show_message("2: Blog operations")
+    cli.show_message("3: Find author by username")
+    cli.show_message("4: Post operations")
+    cli.show_message("5: Find blog with author and posts")
     cli.show_separator()
 
     option = cli.read_option("Enter a number [1-5]: ")
-    print(option)
 
     if option == 1:
         author_operations()
@@ -152,7 +151,7 @@ def post_operations():
     cli.show_message("4: List posts and delete one of them")
     cli.show_separator()
 
-    option = cli.read_option("Enter a number [1-5]: ")
+    option = cli.read_option("Enter a number [1-4]: ")
 
     if option == 1:
         find_post()
