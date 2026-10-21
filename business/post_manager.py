@@ -10,21 +10,16 @@ class PostManager:
         self.post_dao = daos_manager.get_post_dao()
 
     def find_by_id(self, post_id):
-        # TODO: completar
-        return None
+        return self.post_dao.find_by_id(post_id)
 
     def find_posts(self):
-        # TODO: completar
-        return None
+        return self.post_dao.find_posts()
 
     def insert_post(self, post):
-        # TODO: completar
-        return None
+        return self.post_dao.insert_post(post)
 
     def update_post(self, post):
-        # TODO: completar
-        return None
+        return self.post_dao.update_post(post)
 
     def delete_post(self, post):
-        # TODO: completar
-        return None
+        return self.post_dao.delete_post(post)
