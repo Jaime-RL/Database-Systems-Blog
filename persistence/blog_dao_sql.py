@@ -103,6 +103,14 @@ class BlogDaoSql(BlogDao):
             return blog
 
 
+        def find_by_id_with_author_and_posts(self, blog_id):
+            # Reutiliza la consulta con autor y añade los posts del blog
+            blog = self.find_by_id_with_author(blog_id)
+            if blog is not None:
+                blog.set_posts(PostDaoSql().find_posts_by_blog(blog_id))
+            return blog
+
+
         def map_blog(self, result):
              return Blog(id=result['blog_id'],
                          title=result['title'])
